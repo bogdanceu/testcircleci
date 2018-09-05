@@ -4,6 +4,8 @@ jobs:
     working_directory: ~/testcircleci
     docker:
       - image: circleci/node:6.10-browsers
+
     steps:
       - checkout
+      - run: npm install
       - run: npm run lint
